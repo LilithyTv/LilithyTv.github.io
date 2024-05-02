@@ -1,6 +1,6 @@
-# MovieFlix
+# Movie Database
 
-Welcome to the MovieFlix repository! This project is designed to showcase a collection of movies through a web-based interface.
+Welcome to the Movie Database repository! This project is designed to showcase a collection of movies through a web-based interface.
 
 ## Structure
 - `assets/images`: Contains images used throughout the website.
