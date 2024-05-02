@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details</title>
+    <link rel="stylesheet" href="../css/styles_movie_detail.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CineFlex</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="movie-content">
+        <h1 id="movieTitle"></h1>
+        <p><strong>Duration:</strong> <span id="movieDuration"></span></p>
+        <p><strong>Genre:</strong> <span id="movieGenre"></span></p>
+        <p><strong>Description:</strong> <span id="movieDescription"></span></p>
+        <p><strong>Year of Release:</strong> <span id="movieYear"></span></p>
+        <div class="video-wrapper">
+            <iframe id="movieVideo" width="560" height="315" src="" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+<script src="../js/movie-detail.js"></script>
+</body>
+<footer>
+    <p>  &copy; 2024 CineFlex. All rights reserved.</p>
+</footer>
+</html>

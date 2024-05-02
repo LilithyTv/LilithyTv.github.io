@@ -1,10 +1,29 @@
 /* General Body and HTML Styling */
 body, html {
+    height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
     font-family: 'Arial', sans-serif; /* Ensures a clean, modern font is used */
     background-color: #f4f4f4; /* Light grey background for slight contrast */
 }
+
+main {
+    flex-grow: 1; 
+}
+
+footer {
+    height: 50px; 
+    width: 100%;
+    background-color: #ccc;
+    padding-left: 20px; 
+    color: #000; 
+    display: flex;
+    align-items: center; 
+    box-sizing: border-box; 
+}
+
 
 /* Header Styling */
 header {
@@ -45,6 +64,22 @@ nav a {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+#search-area {
+    display: flex;
+    justify-content: left; /* Centra el campo de búsqueda horizontalmente */
+    padding: 20px 20px; /* Añade espacio arriba y abajo para centrarlo verticalmente */
+    margin: 10px 20px; /* Añade espacio a los lados para evitar que el campo toque los bordes */
+}
+
+#movie-search {
+    width: 80%; /* Ajusta el ancho del campo de búsqueda */
+    padding: 10px; /* Añade un poco de relleno interno para que el texto no esté tan pegado */
+    font-size: 16px; /* Aumenta el tamaño de la fuente para mejor legibilidad */
+    border: 1px solid #ccc; /* Añade un borde sutil */
+    border-radius: 5px; /* Redondea las esquinas del campo de búsqueda */
+}
+
+
 /* Responsive image settings */
 .movie-image {
     max-width: 100%; /* Limits the image to not exceed the width of its container */
@@ -80,7 +115,19 @@ nav a {
     overflow: hidden;
     width: 220px;
     margin: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
 }
+
+.movie.hide {
+    transform: scale(0.5); /* Reduce el tamaño para dar un efecto de desaparición */
+    opacity: 0; /* Hace que la película sea totalmente transparente */
+    height: 0;
+    overflow: hidden;
+    margin: 0; /* Elimina márgenes durante la transición */
+    padding: 0; /* Elimina rellenos durante la transición */
+}
+
 
 .movie img {
     width: 100%; /* ensures the image takes the full width of the container */
