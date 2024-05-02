@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             movieElement.addEventListener('click', () => {
                 const movieQuery = `title=${encodeURIComponent(movie.title)}&duration=${encodeURIComponent(movie.duration)}&genre=${encodeURIComponent(movie.genre)}&description=${encodeURIComponent(movie.description)}&year=${encodeURIComponent(movie.year)}&video=${encodeURIComponent(movie.video)}`;
-                window.location.href = `movie-detail.html?${movieQuery}`;
+                window.location.href = `/html/movie-detail.html?${movieQuery}`;
             });
             container.appendChild(movieElement);
         });
