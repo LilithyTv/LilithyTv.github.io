@@ -58,27 +58,3 @@ document.addEventListener('DOMContentLoaded', function() {
     displayMovies(movies); // Display all movies initially
 });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const movies = [
-        { title: "Pulp Fiction", image: "../assets/images/gladiator2.jpg" },
-        { title: "The Dark Knight", image: "../assets/images/gladiator2.jpg" },
-        // Add more movies here
-    ];
-
-    const movieList = document.getElementById('movieList');
-
-    movies.forEach(movie => {
-        const movieItem = document.createElement('div');
-        movieItem.className = 'movie-item';
-        movieItem.innerHTML = `
-            <img src="${movie.image}" alt="${movie.title}">
-            <h3>${movie.title}</h3>
-        `;
-        movieList.appendChild(movieItem);
-
-        movieItem.addEventListener('click', () => {
-            // Handle click, perhaps change main content or expand details
-            console.log(`You clicked on ${movie.title}`);
-        });
-    });
-});

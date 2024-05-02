@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Assuming you pass the movie details via URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const title = urlParams.get('title');
     const duration = urlParams.get('duration');
