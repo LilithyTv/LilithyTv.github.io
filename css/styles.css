@@ -1,0 +1,108 @@
+/* General Body and HTML Styling */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* Ensures a clean, modern font is used */
+    background-color: #f4f4f4; /* Light grey background for slight contrast */
+}
+
+/* Header Styling */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Search Input Styling */
+#search-area input[type="search"] {
+    padding: 8px;
+    width: 300px; /* Fixed width for the search box */
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive image settings */
+.movie-image {
+    max-width: 100%; /* Limits the image to not exceed the width of its container */
+    height: auto; /* Maintains the aspect ratio */
+    display: block; /* Removes bottom space */
+}
+
+@media (max-width: 600px) {
+    #search-area input[type="search"] {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .movie {
+        width: 100%; /* Make each movie box take full width */
+    }
+}
+
+
+#movie-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center the items on the page */
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    width: 220px;
+    margin: 10px;
+}
+
+.movie img {
+    width: 100%; /* ensures the image takes the full width of the container */
+    height: 300px; /* fixed height for all images */
+    object-fit: cover; /* ensures the image covers the area, cropping it if necessary */
+}
+
+.movie h2 {
+    margin: 10px 0 5px;
+    padding: 0 10px;
+    font-size: 1.2em; /* Adjust font size as necessary */
+}
+
+.movie p {
+    padding: 0 10px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+
+.movie:hover {
+    transform: scale(1.03); /* Slight scale-up effect */
+    transition: transform 0.3s ease-in-out;
+}
+
