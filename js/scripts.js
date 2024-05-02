@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const movies = loadMovies();
     const searchInput = document.getElementById('movie-search');
-    const container = document.getElementById('movie-grid');
 
     function displayMovies(moviesToDisplay) {
         const container = document.getElementById('movie-grid');
@@ -22,36 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function filterMovies(criteria) {
-        const allMovies = document.querySelectorAll('.movie');
-        allMovies.forEach(movie => {
-            if (matchCriteria(movie, criteria)) {
-                movie.classList.remove('hide');
-                movie.style.display = 'block'; 
-            } else {
-                movie.classList.add('hide');
-                setTimeout(() => {
-                    movie.style.display = 'none'; 
-                }, 500); 
-            }
-        });
-    }
-
-    function matchCriteria(movie, criteria) {
-        return movie.textContent.toLowerCase().includes(criteria.toLowerCase());
-    }
-
-    function clearFilter() {
-        const hiddenMovies = document.querySelectorAll('.movie.hide');
-        hiddenMovies.forEach(movie => {
-            movie.classList.remove('hide');
-            movie.style.display = 'block';
-        });
-    }
-
     searchInput.addEventListener('input', function() {
         const searchText = searchInput.value.toLowerCase();
-        const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(searchText));
+        const filteredMovies = movies.filter(movie => movie.title.toLowerCase().includes(searchText)
+        || movie.description.toLowerCase().includes(searchText)
+        || movie.genre.toLowerCase().includes(searchText)
+        || movie.year.toLowerCase().includes(searchText)
+    );
         displayMovies(filteredMovies);
     });
 
