@@ -4,8 +4,8 @@ body, html {
     padding: 0;
     display: flex;
     flex-direction: column;
-    font-family: 'Arial', sans-serif; /* Ensures a clean, modern font is used */
-    background-color: #f4f4f4; /* Light grey background for slight contrast */
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f4f4f4; 
 }
 
 main {
@@ -15,7 +15,7 @@ main {
 footer {
     height: 50px; 
     width: 100%;
-    background-color: #ccc;
+    background-image: url('../assets/images/movie_banner.png');
     padding-left: 20px; 
     color: #000; 
     display: flex;
@@ -24,19 +24,22 @@ footer {
 }
 
 
-/* Header Styling */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    text-align: center;
+
+.header {
+    background-image: url('../assets/images/movie_banner.png'); /* Path to your image */
+    background-size: cover; /* Cover the entire header area */
+    background-position: center; /* Center the background image */
+    color: white; /* Change the text color to white for better visibility */
+    text-align: center; /* Center-align the text */
+    padding: 20px 0; /* Add some padding */
 }
+
+
 
 header h1 {
     margin: 0;
 }
 
-/* Navigation Styling */
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -79,19 +82,20 @@ nav a {
 
 
 /* Responsive image settings */
+
 .movie-image {
-    max-width: 100%; /* Limits the image to not exceed the width of its container */
+    max-width: 100%; /* Limits the image from exceeding the width of its container */
     height: auto; /* Maintains the aspect ratio */
     display: block; /* Removes bottom space */
 }
 
 @media (max-width: 600px) {
     #search-area input[type="search"] {
-        width: 100%; /* Full width on smaller screens */
+        width: 100%; 
     }
 
     .movie {
-        width: 100%; /* Make each movie box take full width */
+        width: 100%; 
     }
 }
 
@@ -128,15 +132,15 @@ nav a {
 
 
 .movie img {
-    width: 100%; /* ensures the image takes the full width of the container */
-    height: 300px; /* fixed height for all images */
-    object-fit: cover; /* ensures the image covers the area, cropping it if necessary */
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
 }
 
 .movie h2 {
     margin: 10px 0 5px;
     padding: 0 10px;
-    font-size: 1.2em; /* Adjust font size as necessary */
+    font-size: 1.2em; 
 }
 
 .movie p {
@@ -150,4 +154,6 @@ nav a {
     transform: scale(1.03); /* Slight scale-up effect */
     transition: transform 0.3s ease-in-out;
 }
+
+
 

@@ -1,4 +1,5 @@
-// data/movies.js
+// Mocked. Replace with end-point to retrieve data in future
+
 function loadMovies() {
     return [
         {
