@@ -1,6 +1,6 @@
 # Movie Database
 
-Welcome to the Movie Database repository! This project is designed to showcase a collection of movies through a web-based interface.
+This project is designed to showcase a collection of movies through a web-based interface so I can connect it to a backend. 
 
 ## Structure
 - `assets/images`: Contains images used throughout the website.
